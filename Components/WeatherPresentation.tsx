@@ -12,7 +12,8 @@ export default function WeatherPresentation(){
                 <View style={styles.weatherInfo}>
                     <Text style={styles.tempText}>36&deg;F</Text>
                     <View style={styles.weatherCondition}>
-                        <Text style={styles.weatherConditionText}>Rain</Text>
+                        <Text style={styles.weatherConditionText}>Rain: 20%</Text>
+                        <Text style={styles.weatherConditionText}>Humidity: 45%</Text>
                     </View>
                 </View>
             </View>
@@ -32,7 +33,7 @@ const styles = StyleSheet.create({
     tempText: {
         alignSelf: 'center',
         color: '#fff',
-        fontSize: 30,
+        fontSize: 40,
     },
     locationText: {
         color: '#ffff',
@@ -54,7 +55,8 @@ const styles = StyleSheet.create({
     weatherInfo: {
         flexDirection: 'row',
         width: '50%',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        gap: 5,
     },
     weatherCondition: {
         flexDirection: 'column',
