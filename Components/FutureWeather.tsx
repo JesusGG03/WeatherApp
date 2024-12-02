@@ -15,11 +15,12 @@ export default function FutureWeather(){
 const styles = StyleSheet.create({
     container: {
         alignItems: 'center',
+        justifyContent: 'center',
         gap: 10
     },
     text: {
         color: '#fff',
-        fontSize: 15
+        fontSize: 20
     },
     weatherIcon: {
         backgroundColor: '#fff',

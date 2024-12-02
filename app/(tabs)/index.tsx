@@ -1,17 +1,19 @@
-import { Text, View, StyleSheet, Dimensions } from "react-native";
+import { Text, View, StyleSheet, ScrollView } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 
 import WeatherPresentation from "@/Components/WeatherPresentation";
 import FutureWeather from "@/Components/FutureWeather";
+import FutureForcasts from "@/Components/FutureForcasts";
 
 
 
 export default function Index() {
   
   return (
-    <View style={styles.container} >
+    <ScrollView style={styles.container} >
       <LinearGradient colors={['#F2720C', '#E27E7E']} style={styles.background}/>
         <WeatherPresentation/>
+        
         <View style={styles.predictionContainer}>
           <FutureWeather/>
           <FutureWeather/>
@@ -23,7 +25,18 @@ export default function Index() {
           <FutureWeather/>
           <FutureWeather/>
         </View>
-    </View>
+        
+        <View style={styles.futureForcastContainer}>
+          <FutureForcasts/>
+          <FutureForcasts/>
+          <FutureForcasts/>
+          <FutureForcasts/>
+          <FutureForcasts/>
+          <FutureForcasts/>
+          <FutureForcasts/>
+          
+        </View>
+    </ScrollView>
   );
 }
 
@@ -36,7 +49,7 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     top: 0,
-    height: 950,
+    height: 2000,
   },
   predictionContainer: {
     backgroundColor: '#C25B0A',
@@ -51,5 +64,18 @@ const styles = StyleSheet.create({
     gap: 20,
     paddingLeft: 20,
     overflow: 'hidden',
+  },
+  futureForcastContainer:{
+    backgroundColor: '#C25B0A',
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+    marginTop: 20,
+    paddingTop: 20,
+    paddingBottom: 20,
+    width: '90%',
+    alignSelf: 'center',
+    borderRadius: 20,
+    height: 'auto',
+    gap: 20
   }
 });
